@@ -1,11 +1,12 @@
 # infinit-dev-taks
 
-TR 
+# TR Rehber
 
-Hali hazırda boş bir vps varsa üzerinde çalışabilirsiniz. Tavsiyem workspace kullanmanız ücretsiz ve işinizi görecektir.
+**Hali hazırda boş bir vps varsa üzerinde çalışabilirsiniz. Tavsiyem workspace kullanmanız ücretsiz ve işinizi görecektir.**
 
 WorkSpace'e giriş yaptıktan sonra başlangıçta ihtiyacımız olan yazılımları kuruyoruz.
 
+```
 curl https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
  
 export NVM_DIR="$HOME/.nvm"
@@ -15,3 +16,4 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 22
 nvm alias default 22
 nvm use default
+```
