@@ -1,4 +1,4 @@
-# infinit-dev-taks
+![image](https://github.com/user-attachments/assets/8150f4b4-5fd6-4254-884b-92ae1a8fba2a)# infinit-dev-taks
 
 # TR Rehber
 
@@ -46,3 +46,30 @@ source /root/.bashrc
 **Kurulum İşlemlerini tamamladık sıra 2. adımda.**
 
 ## 2. Adım Proje oluşturma
+
+**İlk adım olark bir proje dosyası oluşturacağız.**
+
+```
+mkdir my-first-project
+cd my-first-project
+```
+
+![image](https://github.com/user-attachments/assets/b256281b-759a-4a3f-be77-198eea507540)
+
+**Şimdi yeni bir proje başlatmak için altta ki komutu giriyoruz önce source komutunu çalıştırın path'i güncelleyin**
+
+```
+source ~/.bashrc
+bun init -y
+```
+![image](https://github.com/user-attachments/assets/6979a82d-75d5-46b1-ab09-19e2af466120)
+
+**İnfinit cli paketini indiriyoruz**
+```
+bun add @infinit-xyz/cli
+```
+
+![image](https://github.com/user-attachments/assets/56a03577-6267-44b8-89a8-40a481dad1f3)
+
+
+
