@@ -100,36 +100,38 @@ bunx infinit account generate
 cd src
 cd scripts
 ```
-```
+
+# Uniswap V3 
+
+```typescript
 import { DeployUniswapV3Action, type actions } from '@infinit-xyz/uniswap-v3/actions'
 import type { z } from 'zod'
  
 type Param = z.infer<typeof actions['init']['paramSchema']>
  
-// TODO: Gerçek parametrelerle değiştirin
+// Gerçek parametrelerle değiştirin
 const params: Param = {
-  // TODO: Yerel para birimi etiketi (örn: ETH)
+  // Yerel para birimi etiketi (örn: ETH)
   "nativeCurrencyLabel": undefined,
  
-  // TODO: Proxy yöneticisinin sahibi adresi
+  // Proxy yöneticisinin sahibi adresi
   "proxyAdminOwner": undefined,
  
-  // TODO: Fabrikanın sahibi adresi
+  // Fabrikanın sahibi adresi
   "factoryOwner": undefined,
  
-  // TODO: Sarılmış yerel token adresi (örn: '0x123...abc')
+  // Sarılmış yerel token adresi (örn: '0x123...abc')
   "wrappedNativeToken": undefined
 }
  
-// TODO: Gerçek hesap ID'si ile değiştirin
+// Gerçek hesap ID'si ile değiştirin
 const accounts = {
   "deployer": ""
 }
  
 export default { params, signer: accounts, Action: DeployUniswapV3Action }
+
 ```
-
-
 
 
 
