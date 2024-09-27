@@ -17,3 +17,7 @@ nvm install 22
 nvm alias default 22
 nvm use default
 ```
+
+** Kodları girdikten sonra ekranınız böyle olacaktır. **
+
+![image](https://github.com/user-attachments/assets/c40f97f7-5aa7-403d-9e9e-3728749e0a82)
