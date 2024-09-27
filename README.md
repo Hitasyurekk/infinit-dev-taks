@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/8150f4b4-5fd6-4254-884b-92ae1a8fba2a)# infinit-dev-taks
 
 # TR Rehber
 
