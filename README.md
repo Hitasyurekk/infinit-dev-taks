@@ -70,5 +70,70 @@ bun add @infinit-xyz/cli
 
 ![image](https://github.com/user-attachments/assets/56a03577-6267-44b8-89a8-40a481dad1f3)
 
+**Şimdi yeni bir infinit projesi için son olarak bu komutu yazıyoruz ve ok tuşları ile holesky , uniswap seçip Y diyerek işlemi onaylıyoruz**
+```
+bunx infinit init
+```
+
+![image](https://github.com/user-attachments/assets/d1b66e46-9dc4-4e4e-9155-21e37ea68420)
+
+## 3. Adım Hesap oluşturma
+
+**Şimdi burada yeni bir hesap oluşturuacağız**
+
+```
+bunx infinit account generate
+```
+**Ekranda bir hesap oluşturuyoruz kullanıcı adı ve şifre giriyoruz kaybetmeyin.**
+![image](https://github.com/user-attachments/assets/706d7639-9b3e-413b-9325-f25bc896b4b5)
+
+**Hesap oluşturduktan sonra hesap bilgilerinizi vericek bunları kaydedin kaybetmeyin. Buraya Test token göndereceğiz.**
+
+![image](https://github.com/user-attachments/assets/03ca534e-d2af-4ea3-91cf-0643cac42bdc)
+
+
+## 4. adım Scritpleri çalıştırmak
+
+**Önce script klasörüne gireceğiz sonrasında Uniswap kodlarını çalıştırıcağız. Cüzdanınınıza holesky test ağında token göndermeyi unutmayın.**
+
+```
+cd src
+cd scripts
+```
+```
+import { DeployUniswapV3Action, type actions } from '@infinit-xyz/uniswap-v3/actions'
+import type { z } from 'zod'
+ 
+type Param = z.infer<typeof actions['init']['paramSchema']>
+ 
+// TODO: Gerçek parametrelerle değiştirin
+const params: Param = {
+  // TODO: Yerel para birimi etiketi (örn: ETH)
+  "nativeCurrencyLabel": undefined,
+ 
+  // TODO: Proxy yöneticisinin sahibi adresi
+  "proxyAdminOwner": undefined,
+ 
+  // TODO: Fabrikanın sahibi adresi
+  "factoryOwner": undefined,
+ 
+  // TODO: Sarılmış yerel token adresi (örn: '0x123...abc')
+  "wrappedNativeToken": undefined
+}
+ 
+// TODO: Gerçek hesap ID'si ile değiştirin
+const accounts = {
+  "deployer": ""
+}
+ 
+export default { params, signer: accounts, Action: DeployUniswapV3Action }
+```
+
+
+
+
+
+
+
 
 
