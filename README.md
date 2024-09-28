@@ -28,8 +28,7 @@ nvm use default
 ```
 foundryup
 curl -L https://foundry.paradigm.xyz | bash
-source /root/.bashrc
-foundryup
+source /home/codespace/.bashrc
 ```
 ![image](https://github.com/user-attachments/assets/ede789f0-c1a6-4abc-afee-eecbdd8f79f2)
 
