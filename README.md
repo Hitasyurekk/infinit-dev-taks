@@ -196,3 +196,8 @@ export default { params, signer, Action: SetFactoryOwnerAction }
 bunx infinit script execute setFactoryOwnerAction.script.ts
 ```
 
+**Çıktı bu şekilde olduysa işlem tamamlanmıştır. , yapmanız gereken tek şey altta vereceğim şablonda bu SS'i alarak tweet atmak ve discord'a link bırakmak rolunuz ve gelecek #Airdrop hayırlı olsun.
+
+![image](https://github.com/user-attachments/assets/367f9393-59d8-4a48-9c5f-87412a90d794)
+
+
