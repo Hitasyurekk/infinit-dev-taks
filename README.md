@@ -112,30 +112,40 @@ type Param = z.infer<typeof actions['init']['paramSchema']>
 // Gerçek parametrelerle değiştirin
 const params: Param = {
   // Yerel para birimi etiketi (örn: ETH)
-  "nativeCurrencyLabel": undefined,
+  "nativeCurrencyLabel": ETH,
  
   // Proxy yöneticisinin sahibi adresi
-  "proxyAdminOwner": undefined,
+  "proxyAdminOwner": 0xc5709e9ec34e654fcbee62fc618d7cc96043bc69,
  
   // Fabrikanın sahibi adresi
-  "factoryOwner": undefined,
+  "factoryOwner": 0xc5709e9ec34e654fcbee62fc618d7cc96043bc69,
  
   // Sarılmış yerel token adresi (örn: '0x123...abc')
-  "wrappedNativeToken": undefined
+  "wrappedNativeToken": 0x6B5817E7091BC0C747741E96820b0199388245EA
 }
  
 // Gerçek hesap ID'si ile değiştirin
 const accounts = {
-  "deployer": ""
+  "deployer": "hitasyurek"
 }
  
 export default { params, signer: accounts, Action: DeployUniswapV3Action }
 
 ```
+**Bilgileri verdiğim örnek kodda ki gibi değiştirin ve resimde ki kodları silip kendi değiştirdiğiniz kodu yapışitırın. Ben kendi cüzdan adresimi girdin siz terminal içinde ki kendi cüzdan adresinizi girikcesiniz.**
 
+![image](https://github.com/user-attachments/assets/513a0b65-874a-48e8-98e4-807786afd9fc)
 
+**Script'i çalıştırmak için kodu giriyoruz.**
+```
+bunx infinit script execute deployUniswapV3Action.script.ts
+```
 
+**Şifremizi girip işlemleri onaylıyoruz** 
 
+![image](https://github.com/user-attachments/assets/1b2f78e6-209d-4639-b30a-7ed8d9e2f57c)
 
+**Bu ekran geldiğinde bu adımda tamamlanmıştır**
 
+![image](https://github.com/user-attachments/assets/2664b50b-0a17-4705-b83c-15fe638d9130)
 
