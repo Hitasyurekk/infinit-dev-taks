@@ -104,32 +104,33 @@ cd scripts
 # Uniswap V3 
 
 ```typescript
-import { DeployUniswapV3Action, type actions } from '@infinit-xyz/uniswap-v3/actions'
-import type { z } from 'zod'
- 
-type Param = z.infer<typeof actions['init']['paramSchema']>
- 
+import { DeployUniswapV3Action, type actions } from '@infinit-xyz/uniswap-v3/actions';
+import type { z } from 'zod';
+
+type Param = z.infer<typeof actions['init']['paramSchema']>;
+
 // Gerçek parametrelerle değiştirin
 const params: Param = {
   // Yerel para birimi etiketi (örn: ETH)
-  "nativeCurrencyLabel": ETH,
- 
+  "nativeCurrencyLabel": 'ETH', // Tırnak içinde
+
   // Proxy yöneticisinin sahibi adresi
-  "proxyAdminOwner": 0xc5709e9ec34e654fcbee62fc618d7cc96043bc69,
- 
+  "proxyAdminOwner": '0xc5709e9ec34e654fcbee62fc618d7cc96043bc69', // Tırnak içinde
+
   // Fabrikanın sahibi adresi
-  "factoryOwner": 0xc5709e9ec34e654fcbee62fc618d7cc96043bc69,
- 
+  "factoryOwner": '0xc5709e9ec34e654fcbee62fc618d7cc96043bc69', // Tırnak içinde
+
   // Sarılmış yerel token adresi (örn: '0x123...abc')
-  "wrappedNativeToken": 0x6B5817E7091BC0C747741E96820b0199388245EA
+  "wrappedNativeToken": '0x6B5817E7091BC0C747741E96820b0199388245EA' // Tırnak içinde
 }
- 
+
 // Gerçek hesap ID'si ile değiştirin
 const accounts = {
   "deployer": "hitasyurek"
 }
- 
-export default { params, signer: accounts, Action: DeployUniswapV3Action }
+
+export default { params, signer: accounts, Action: DeployUniswapV3Action };
+
 
 ```
 **Bilgileri verdiğim örnek kodda ki gibi değiştirin ve resimde ki kodları silip kendi değiştirdiğiniz kodu yapışitırın. Ben kendi cüzdan adresimi girdin siz terminal içinde ki kendi cüzdan adresinizi girikcesiniz.**
@@ -189,5 +190,9 @@ const signer = {
 export default { params, signer, Action: SetFactoryOwnerAction }
 ```
 
+**Bu işlemden sonra scriptson kodumuzu çalıştırarak işlemleri bitiriyoruz**
 
+```
+bunx infinit script execute setFactoryOwnerAction.script.ts
+```
 
