@@ -149,3 +149,45 @@ bunx infinit script execute deployUniswapV3Action.script.ts
 
 ![image](https://github.com/user-attachments/assets/2664b50b-0a17-4705-b83c-15fe638d9130)
 
+## 5. Adım Early Rolunu almak ve her şeyi bitirmek.
+
+**Kodu çalıştırarak scriptleri sıralıyoruz**
+
+```
+bunx infinit script generate
+```
+![image](https://github.com/user-attachments/assets/08d0038a-2760-41fd-b1f7-8026a1ebce30)
+
+**Şimdi örnek bir script oluşturuyoruz içine girip düzenleyeceğiz**
+```
+bunx infinit script generate setFactoryOwnerAction
+```
+
+**Şimdi bilgileri kendi bilgilerinize göre düzenleyin.**
+
+```typescript
+import { SetFactoryOwnerAction, type actions } from '@infinit-xyz/uniswap-v3/actions'
+import type { z } from 'zod'
+ 
+type Param = z.infer<typeof actions['setFactoryOwnerAction']['paramSchema']>
+ 
+// TODO: Gerçek parametrelerle değiştirin
+const params: Param = {
+ 
+  // TODO: Uniswap V3 fabrikasının adresini girin
+  "uniswapV3Factory": undefined,
+ 
+  // TODO: Yeni sahibi belirtin
+  "newOwner": undefined
+}
+ 
+// TODO: Gerçek imzacı kimliğini belirtin
+const signer = {
+  "factoryOwner": ""
+}
+ 
+export default { params, signer, Action: SetFactoryOwnerAction }
+```
+
+
+
